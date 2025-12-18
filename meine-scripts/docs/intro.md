@@ -1,5 +1,5 @@
-# Netpurple
+# Netpurple Introduction
 
 Welcome to the Netpurple documentation.
 
-This is a placeholder for future content.
+Here you can find scripts, automations, and links to useful things.
