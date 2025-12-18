@@ -1,4 +1,8 @@
-# Flipper Enrolment
+---
+sidebar_position: 1
+---
+
+# Flipper Windows Enrolment
 
 This script is used to enrol Windows PCs in the internal company domain and Intune.
 
@@ -56,5 +60,16 @@ STRING your_servcice_account@mail.com mailto:your_servcice_account@mail.com
 ENTER
 DELAY 2000
 STRING Passwort_servcieaccpunt
+ENTER
+```
+
+### After Restart
+
+In some cases, you will need to log in again with your service account email and password.
+
+```text
+STRING service@mail.com
+TAB
+STRING service_pw
 ENTER
 ```
