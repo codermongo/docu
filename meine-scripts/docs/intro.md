@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Netpurple Introduction
 
 Welcome to the Netpurple documentation.
