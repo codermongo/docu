@@ -4,32 +4,32 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Netpurple Ecosystem',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Comprehensive documentation and tools for the Netpurple ecosystem, 
+        centralizing our knowledge and utilities.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Flipper Zero Integration',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Control and automate Windows environments using Flipper Zero. 
+        Explore guides for Windows Enrolment, Wi-Fi Login, and more.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Windows Utilities',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Maintain and verify your system with our Windows tools, 
+        including the CheckPC utility for system health checks.
       </>
     ),
   },

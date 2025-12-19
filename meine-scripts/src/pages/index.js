@@ -3,6 +3,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
+import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import styles from './index.module.css';
 
 function HomepageHeader() {
@@ -34,9 +35,7 @@ export default function Home() {
       description="Netpurple Documentation">
       <HomepageHeader />
       <main>
-        <div className="container">
-            <p style={{textAlign: 'center', padding: '2rem'}}>Welcome to Netpurple.</p>
-        </div>
+        <HomepageFeatures />
       </main>
     </Layout>
   );
