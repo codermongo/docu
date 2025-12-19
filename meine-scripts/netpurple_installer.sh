@@ -57,13 +57,35 @@ run_container() {
     local name=$1
     local image=$2
     local ports=$3
-    echo "Installing $name..."
+    echo "Installing $name (Docker)..."
     docker run -d --restart always --name "$name" $ports "$image"
     if [ $? -eq 0 ]; then
         echo "$name installed successfully."
     else
         echo "Failed to install $name."
     fi
+}
+
+# Function to install system package
+install_system_package() {
+    local package=$1
+    echo "Installing $package (System)..."
+    apt-get install -y "$package"
+    if [ $? -eq 0 ]; then
+        echo "$package installed successfully."
+    else
+        echo "Failed to install $package."
+    fi
+}
+
+# Function for Webmin specific install
+install_webmin() {
+    echo "Installing Webmin..."
+    wget http://www.webmin.com/download/deb/webmin-current.deb
+    dpkg -i webmin-current.deb
+    apt-get -f install -y
+    rm webmin-current.deb
+    echo "Webmin installation attempt complete."
 }
 
 # Main Menu
@@ -83,41 +105,41 @@ while true; do
     case $category in
         1)
             echo "--- Administration ---"
-            echo "1. Webmin"
-            echo "2. Portainer"
-            echo "3. phpMyAdmin"
+            echo "1. Webmin (System)"
+            echo "2. Portainer (Docker)"
+            echo "3. phpMyAdmin (System)"
             echo "4. Back"
             read -p "Selection: " sel
             case $sel in
-                1) run_container "webmin" "dwp/webmin" "-p 10000:10000" ;;
+                1) install_webmin ;;
                 2) run_container "portainer" "portainer/portainer-ce" "-p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock" ;;
-                3) run_container "phpmyadmin" "phpmyadmin/phpmyadmin" "-p 8080:80" ;;
+                3) install_system_package "phpmyadmin" ;;
             esac
             ;;
         2)
             echo "--- Databases ---"
-            echo "1. MySQL"
-            echo "2. MariaDB"
-            echo "3. MongoDB"
-            echo "4. PostgreSQL"
+            echo "1. MySQL (System)"
+            echo "2. MariaDB (System)"
+            echo "3. MongoDB (System)"
+            echo "4. PostgreSQL (System)"
             echo "5. Back"
             read -p "Selection: " sel
             case $sel in
-                1) run_container "mysql" "mysql:latest" "-e MYSQL_ROOT_PASSWORD=root" ;;
-                2) run_container "mariadb" "mariadb:latest" "-e MYSQL_ROOT_PASSWORD=root" ;;
-                3) run_container "mongodb" "mongo:latest" "" ;;
-                4) run_container "postgresql" "postgres:latest" "-e POSTGRES_PASSWORD=root" ;;
+                1) install_system_package "mysql-server" ;;
+                2) install_system_package "mariadb-server" ;;
+                3) install_system_package "mongodb" ;;
+                4) install_system_package "postgresql" ;;
             esac
             ;;
         3)
             echo "--- Languages ---"
-            echo "1. PHP (current version)"
-            echo "2. NPM"
+            echo "1. PHP (System)"
+            echo "2. NPM (System)"
             echo "3. Back"
             read -p "Selection: " sel
             case $sel in
-                1) run_container "php" "php:latest" "" ;; # Pulls and runs (exits immediately if not interactive/daemon, but fulfills requirement)
-                2) run_container "npm" "node:latest" "" ;;
+                1) install_system_package "php" ;;
+                2) install_system_package "npm" ;;
             esac
             ;;
         4)
@@ -134,18 +156,18 @@ while true; do
                 2) run_container "nginx-proxy-manager" "jc21/nginx-proxy-manager" "-p 81:81 -p 80:80 -p 443:443" ;;
                 3) run_container "matrix" "matrixdotorg/synapse" "-p 8008:8008" ;;
                 4) run_container "element" "vectorim/element-web" "-p 8082:80" ;;
-                5) run_container "kasm" "kasmweb/kasm-web" "-p 3000:3000" ;; # Simplification
+                5) run_container "kasm" "kasmweb/kasm-web" "-p 3000:3000" ;;
             esac
             ;;
         5)
             echo "--- Web servers ---"
-            echo "1. Apache2"
-            echo "2. Nginx"
+            echo "1. Apache2 (System)"
+            echo "2. Nginx (System)"
             echo "3. Back"
             read -p "Selection: " sel
             case $sel in
-                1) run_container "apache2" "httpd:latest" "-p 8083:80" ;;
-                2) run_container "nginx" "nginx:latest" "-p 8084:80" ;;
+                1) install_system_package "apache2" ;;
+                2) install_system_package "nginx" ;;
             esac
             ;;
         6)
