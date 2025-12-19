@@ -6,36 +6,36 @@
 
 :root {
   /* Netpurple Variables */
-  --netpurple-primary: #8B5CF6;
+  --netpurple-primary: #2d0782;
   --netpurple-secondary: #3B82F6;
   --netpurple-dark-bg: #0a0a0a;
   --netpurple-text-primary: #ffffff;
   --netpurple-text-secondary: #b0b0b0;
   --netpurple-button: #6366f1;
 
-  /* Infima Overrides - Based on #8B5CF6 */
-  --ifm-color-primary: #8B5CF6;
-  --ifm-color-primary-dark: #7d53dd;
-  --ifm-color-primary-darker: #764ed1;
-  --ifm-color-primary-darkest: #6140ac;
-  --ifm-color-primary-light: #996ff8;
-  --ifm-color-primary-lighter: #a079f9;
-  --ifm-color-primary-lightest: #b494fa;
+  /* Infima Overrides - Based on #2d0782 */
+  --ifm-color-primary: #2d0782;
+  --ifm-color-primary-dark: #290675;
+  --ifm-color-primary-darker: #26066f;
+  --ifm-color-primary-darkest: #20055b;
+  --ifm-color-primary-light: #441fb3;
+  --ifm-color-primary-lighter: #522dc7;
+  --ifm-color-primary-lightest: #7a5ce5;
   
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-footer-background-color: #0a0a0a;
+  --ifm-footer-background-color: #000000;
 }
 
 /* Dark Mode overrides */
 [data-theme='dark'] {
-  --ifm-color-primary: #8B5CF6;
-  --ifm-color-primary-dark: #7d53dd;
-  --ifm-color-primary-darker: #764ed1;
-  --ifm-color-primary-darkest: #6140ac;
-  --ifm-color-primary-light: #996ff8;
-  --ifm-color-primary-lighter: #a079f9;
-  --ifm-color-primary-lightest: #b494fa;
+  --ifm-color-primary: #2d0782;
+  --ifm-color-primary-dark: #290675;
+  --ifm-color-primary-darker: #26066f;
+  --ifm-color-primary-darkest: #20055b;
+  --ifm-color-primary-light: #441fb3;
+  --ifm-color-primary-lighter: #522dc7;
+  --ifm-color-primary-lightest: #7a5ce5;
   
   --ifm-background-color: #0a0a0a;
   --ifm-background-surface-color: #121212; /* Slightly lighter for cards/nav */
