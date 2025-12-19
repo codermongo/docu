@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # Flipper Windows Enrolment
 
+GitHub[Windows_Enrolment.txt](https://github.com/codermongo/docu/blob/main/Scripts/Flipper/Windows_Enrolment.txt)
+
 This script is used to enrol Windows PCs in the internal company domain and Intune.
 
 ## Requirements

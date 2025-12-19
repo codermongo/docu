@@ -1,0 +1,4 @@
+STRING username
+TAB
+STRING user_pw
+ENTER

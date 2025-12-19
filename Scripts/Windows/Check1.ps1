@@ -1,22 +1,3 @@
-# CheckPCScript
-
-GitHub[Check1.ps1](https://github.com/codermongo/docu/blob/main/Scripts/Windows/Check1.ps1)
-
-This script is a comprehensive system diagnosis tool. It can be used to find out detailed information about your system hardware and connectivity.
-
-## Features
-
-The script checks and displays the following information:
-*   **CPU:** Processor model and details.
-*   **GPU:** Graphics card information and VRAM size.
-*   **RAM:** Total installed physical memory and currently free memory.
-*   **Storage:** List of local drives (HDD/SSD) with total size and free space.
-*   **Network:** Performs a ping check to `google.co.uk` to verify internet connectivity.
-*   **Keyboard Tester:** Opens a new window with an interactive keyboard tester to verify key presses.
-
-## The Script
-
-```powershell
 <#
 .SYNOPSIS
 PC Diagnose & Keyboard Tester (V7.0 - Final)
@@ -157,4 +138,3 @@ $scriptBlock = {
 
 $encodedCommand = [Convert]::ToBase64String([Text.Encoding]::Unicode.GetBytes($scriptBlock.ToString()))
 Start-Process powershell -ArgumentList "-NoProfile -EncodedCommand $encodedCommand"
-```
