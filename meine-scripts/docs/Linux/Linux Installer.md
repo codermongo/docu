@@ -1,11 +1,10 @@
 # Linux Installer
 
-GitHub[netpurple_installer.sh](https://github.com/codermongo/docu/blob/main/Scripts/Linux/netpurple_installer.sh)
-
 The Linux Installer script (`netpurple_installer.sh`) is a comprehensive tool designed to automate the setup of various services and applications on Debian-like systems (including Ubuntu). It simplifies the process of installing Docker, managing system prerequisites, and deploying both containerized and system-level applications.
 
 ## Location
-The script is located at: `C:\code\Docusaurus\meine-scripts\netpurple_installer.sh` (relative to the repository root).
+
+[Github[Netpurple Installer]](https://github.com/codermongo/docu/blob/main/Scripts/Linux/netpurple_installer.sh)
 
 ## Features
 

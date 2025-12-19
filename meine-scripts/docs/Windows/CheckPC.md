@@ -1,8 +1,10 @@
 # CheckPCScript
 
-GitHub[Check1.ps1](https://github.com/codermongo/docu/blob/main/Scripts/Windows/Check1.ps1)
-
 This script is a comprehensive system diagnosis tool. It can be used to find out detailed information about your system hardware and connectivity.
+
+## Location
+
+[Github[Check1.ps1]](https://github.com/codermongo/docu/blob/main/Scripts/Windows/Check1.ps1)
 
 ## Features
 
