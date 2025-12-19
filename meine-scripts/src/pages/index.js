@@ -12,13 +12,15 @@ export default function Home() {
       title={`Hello from ${siteConfig.title}`}
       description="Netpurple Documentation">
       <main>
-        <HomepageFeatures />
-        <div className="container" style={{display: 'flex', justifyContent: 'center', paddingBottom: '2rem'}}>
-          <Link
-            className="button button--primary button--lg"
-            to="/docs/intro">
-            To the Docs
-          </Link>
+        <div className={styles.centeredMain}>
+          <HomepageFeatures />
+          <div className="container" style={{display: 'flex', justifyContent: 'center', paddingBottom: '2rem'}}>
+            <Link
+              className="button button--primary button--lg"
+              to="/docs/intro">
+              To the Docs
+            </Link>
+          </div>
         </div>
       </main>
     </Layout>

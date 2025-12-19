@@ -21,3 +21,13 @@
   align-items: center;
   justify-content: center;
 }
+
+.centeredMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  width: 100%;
+  text-align: center;
+}

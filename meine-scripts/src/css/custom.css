@@ -27,6 +27,10 @@
   --ifm-footer-background-color: #000000;
 }
 
+.footer {
+  background-color: #000000 !important;
+}
+
 /* Dark Mode overrides */
 [data-theme='dark'] {
   --ifm-color-primary: #2d0782;
