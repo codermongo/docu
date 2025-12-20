@@ -8,8 +8,10 @@ const FeatureList = [
     icon: '💜',
     description: (
       <>
-        Comprehensive documentation and tools for the Netpurple ecosystem, 
-        centralizing our knowledge and utilities.
+        <span style={{color: '#000000'}}>
+          Comprehensive documentation and tools for the Netpurple ecosystem, 
+          centralizing our knowledge and utilities.
+        </span>
       </>
     ),
   },
